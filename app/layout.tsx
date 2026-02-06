@@ -3,6 +3,7 @@ import type { Metadata, Viewport } from "next";
 import { Manrope, JetBrains_Mono } from "next/font/google";
 import { LocaleProvider } from "@/components/locale-provider";
 import { ThemeProvider } from "@/components/theme-provider";
+import { Analytics } from "@vercel/analytics/next"
 
 import "./globals.css";
 
@@ -40,6 +41,8 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <LocaleProvider>{children}</LocaleProvider>
+                    <Analytics />
+
         </ThemeProvider>
       </body>
     </html>
