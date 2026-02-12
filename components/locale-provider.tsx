@@ -5,7 +5,7 @@ import { LocaleContext, defaultLocale, getDictionary, type Locale } from "@/lib/
 
 export function LocaleProvider({ children }: { children: ReactNode }) {
   const [locale, setLocale] = useState<Locale>(defaultLocale);
-  const t = getDictionary(locale);
+  const t = getDictionary(locale);  
 
   return (
     <LocaleContext value={{ locale, setLocale, t }}>
